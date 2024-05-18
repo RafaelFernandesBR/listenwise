@@ -1,0 +1,17 @@
+[
+    {
+        "id": "audio1",
+        "src": "audio1.mp3",
+        "truePhrase": "The cat is on the roof"
+    },
+    {
+        "id": "audio2",
+        "src": "audio2.wav",
+        "truePhrase": "She sells seashells by the seashore"
+    },
+    {
+        "id": "audio3",
+        "src": "audio3.wav",
+        "truePhrase": "The quick brown fox jumps over the lazy dog"
+    }
+]
