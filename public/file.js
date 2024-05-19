@@ -1,5 +1,8 @@
+import Feedback from './feedback.js';
+
 let audioDatabase = [];
 let currentAudioId = null;
+const feedback = new Feedback('feedback');
 
 // Função para carregar os dados do JSON
 async function loadAudioData() {
@@ -69,10 +72,10 @@ function getFakePhrases(excludeIndex) {
 // Função para verificar a resposta
 function checkAnswer(selectedPhrase, truePhrase) {
     if (selectedPhrase === truePhrase) {
-        alert('Correto!');
+        feedback.showFeedback('Correto!', true);
         loadRandomAudio();
     } else {
-        alert('Errado. Tente novamente.');
+        feedback.showFeedback('Errado. Tente novamente.', false);
     }
 }
 
@@ -86,3 +89,6 @@ function shuffleArray(array) {
 
 // Carregar os dados ao carregar a página
 window.onload = loadAudioData;
+
+// Anexar funções ao objeto window para que estejam disponíveis globalmente
+window.loadRandomAudio = loadRandomAudio;
