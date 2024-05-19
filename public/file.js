@@ -1,4 +1,5 @@
 let audioDatabase = [];
+let currentAudioId = null;
 
 // Função para carregar os dados do JSON
 async function loadAudioData() {
@@ -24,8 +25,14 @@ function loadRandomAudio() {
         return;
     }
 
-    const randomIndex = Math.floor(Math.random() * audioDatabase.length);
-    const audioData = audioDatabase[randomIndex];
+    let randomIndex;
+    let audioData;
+    do {
+        randomIndex = Math.floor(Math.random() * audioDatabase.length);
+        audioData = audioDatabase[randomIndex];
+    } while (audioData.id === currentAudioId);
+
+    currentAudioId = audioData.id;
     const fakePhrases = getFakePhrases(randomIndex);
 
     document.getElementById('audio-source').src = audioData.src;
