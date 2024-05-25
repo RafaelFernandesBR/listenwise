@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  listenwise:
+    build: .
+    container_name: listenwise
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./audios:/usr/src/app/audios
+    environment:
+      NODE_ENV: development
+    networks:
+      - listenwise-net
+
+networks:
+  listenwise-net:
+    driver: bridge
