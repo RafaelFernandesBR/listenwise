@@ -94,33 +94,36 @@ function uploadAudio() {
 
 // Função para carregar o arquivo de áudio do usuário
 function uploadAudioFile() {
-  const fileInput = document.getElementById('audio-file');
-  const truePhraseInput = document.getElementById('true-phrase');
-  const file = fileInput.files[0];
-  const truePhrase = truePhraseInput.value;
-
-  if (!file || !truePhrase) {
-    alert('Por favor, selecione um arquivo de áudio e insira a frase correta.');
-    return;
-  }
-
-  const formData = new FormData();
-  formData.append('audio', file);
-  formData.append('truePhrase', truePhrase);
-
-  fetch('/upload-audio', {
-    method: 'POST',
-    body: formData,
-  })
-    .then(response => response.text())
-    .then(message => {
-      alert(message);
-      loadRandomAudio();
-      document.getElementById('upload-container').style.display = 'none';
+    const fileInput = document.getElementById('audio-file');
+    const truePhraseInput = document.getElementById('true-phrase');
+    const file = fileInput.files[0];
+    const truePhrase = truePhraseInput.value;
+  
+    if (!file || !truePhrase) {
+      feedback.showFeedback('Por favor, selecione um arquivo de áudio e insira a frase correta.', false);
+      return;
+    }
+  
+    const formData = new FormData();
+    formData.append('audio', file);
+    formData.append('truePhrase', truePhrase);
+  
+    fetch('/upload-audio', {
+      method: 'POST',
+      body: formData,
     })
-    .catch(error => console.error('Erro ao carregar o áudio:', error));
-}
-
+      .then(response => response.text())
+      .then(message => {
+        feedback.showFeedback(message, true);
+        loadRandomAudio();
+        document.getElementById('upload-container').style.display = 'none';
+      })
+      .catch(error => {
+        console.error('Erro ao carregar o áudio:', error);
+        feedback.showFeedback('Erro ao carregar o áudio. Tente novamente.', false);
+      });
+  }
+  
 // Carregar os dados ao carregar a página
 window.onload = loadAudioData;
 
