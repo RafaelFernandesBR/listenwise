@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ListenWise</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ListenWise</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Prática de Escuta em Inglês</h1>
-    <div id="audio-controls">
-        <button onclick="loadRandomAudio()">Escolher Áudio Aleatório</button>
-        <audio id="audio" controls style="display: none;">
-            <source id="audio-source" src="" type="audio/mpeg">
-            Seu navegador não suporta o elemento de áudio.
-        </audio>
-    </div>
-    <div id="phrases-container"></div>
-    <div id="feedback" aria-live="assertive" role="alert"></div>
+  <h1>Prática de Escuta em Inglês</h1>
+  <div id="audio-controls">
+    <button onclick="loadRandomAudio()">Escolher Áudio Aleatório</button>
+    <button onclick="uploadAudio()">Carregar Áudio</button>
+    <audio id="audio" controls style="display: none;">
+      <source id="audio-source" src="" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+  </div>
+  <div id="upload-container" role="form" aria-label="Formulário de upload de áudio" aria-live="polite" style="display: none;">
+    <input type="file" id="audio-file" accept="audio/mpeg" aria-label="Escolher arquivo de áudio" aria-labelledby="audio-file-label" class="upload-element"><br/>
+    <label>Adicione a fraze do áudio</label><br/>
+    <input type="text" id="true-phrase" placeholder="Insira a frase correta" class="upload-element"><br/>
+    <button onclick="uploadAudioFile()">Carregar</button>
+  </div>
+  <div id="phrases-container"></div>
+  <div id="feedback" aria-live="assertive" role="alert"></div>
 
-    <script src="file.js" type="module"></script>
+  <script src="file.js" type="module"></script>
 </body>
 </html>

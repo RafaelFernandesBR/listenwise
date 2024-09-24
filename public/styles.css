@@ -6,6 +6,56 @@ body {
 
 #audio-controls {
     margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#audio-controls button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#audio-controls button:hover {
+    background-color: #f0f0f0;
+}
+
+#upload-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#upload-container input[type="file"] {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#upload-container input[type="text"] {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px; /* Adiciona um espacamento de 20px entre o label e o campo de edição */
+}
+
+#upload-container button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Adiciona um espacamento de 20px entre o campo de texto e o botão de enviar */
+}
+
+#upload-container button:hover {
+    background-color: #f0f0f0;
 }
 
 .phrase {

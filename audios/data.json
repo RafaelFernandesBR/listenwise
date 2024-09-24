@@ -1,17 +1,72 @@
 [
     {
         "id": "audio1",
-        "src": "audio1.mp3",
-        "truePhrase": "The cat is on the roof"
+        "src": "1.wav",
+        "truePhrase": "Hello, how are you?"
     },
     {
         "id": "audio2",
-        "src": "audio2.wav",
-        "truePhrase": "She sells seashells by the seashore"
+        "src": "2.wav",
+        "truePhrase": "What is your name?"
     },
     {
         "id": "audio3",
-        "src": "audio3.wav",
-        "truePhrase": "The quick brown fox jumps over the lazy dog"
+        "src": "3.wav",
+        "truePhrase": "My name is John."
+    },
+    {
+        "id": "audio4",
+        "src": "4.wav",
+        "truePhrase": "I like to play soccer."
+    },
+    {
+        "id": "audio5",
+        "src": "5.wav",
+        "truePhrase": "She is reading a book."
+    },
+    {
+        "id": "audio6",
+        "src": "6.wav",
+        "truePhrase": "He is a teacher."
+    },
+    {
+        "id": "audio7",
+        "src": "7.wav",
+        "truePhrase": "We are going to the park."
+    },
+    {
+        "id": "audio8",
+        "src": "8.wav",
+        "truePhrase": "The cat is on the table."
+    },
+    {
+        "id": "audio9",
+        "src": "9.wav",
+        "truePhrase": "Can you help me?"
+    },
+    {
+        "id": "audio10",
+        "src": "10.wav",
+        "truePhrase": "Thank you very much."
+    },
+    {
+        "id": "daniel1",
+        "src": "daniel1.wav",
+        "truePhrase": "What did you do yesterday?"
+    },
+    {
+        "id": "daniel2",
+        "src": "daniel2.wav",
+        "truePhrase": "Did you have a nice weekend?"
+    },
+    {
+        "id": "daniel3",
+        "src": "daniel3.wav",
+        "truePhrase": "Did you have a nice weekend?"
+    },
+    {
+        "id": "11249c55-560e-48b0-ab27-0f1ea8c9a408",
+        "src": "carlinhos rotulador.mp3",
+        "truePhrase": "Carlinhos rotulador"
     }
 ]
